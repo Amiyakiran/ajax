@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //asynchronous function call
+    let luckyContext = new Promise((res, rej)=>{
+        let myLottery = 3
+        let lottery  = math.floor(math.random()*5)
+        if (myLottery == lottery) {
+            res('you won')
+        }
+        else{
+            rej('better luck next time')
+        }
+    })
+    luckyContext.then((result)=>{
+        alert(result)
+    }).catch((result)=>{
+        alert(result)
+    })
+</script>
+</html>
